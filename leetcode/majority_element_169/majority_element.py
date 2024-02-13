@@ -1,8 +1,7 @@
 from typing import List
 
 def majority_element(nums: List[int])->int:
-    item = 0
-    majority = 0
+    item, majority = 0, 0
     for num in nums:
         if majority == 0:
             item = num
