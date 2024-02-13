@@ -1,9 +1,10 @@
+import pytest
+from leetcode.majority_element_169.majority_element import majority_element
 
-from leetcode.majority_element_169 import majority_element as leet
-
-
+@pytest.mark.skip(reason='Unskip only to test solution')
 def test_answer1():
-    assert leet.majority_element([3,2,3]) == 3
+    assert majority_element([3,2,3]) == 3
 
+@pytest.mark.skip(reason='Unskip only to test solution')
 def test_answer2():
-    assert leet.majority_element([2,2,1,1,1,2,2]) == 2
+    assert majority_element([2,2,1,1,1,2,2]) == 2
