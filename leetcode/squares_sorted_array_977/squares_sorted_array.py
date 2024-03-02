@@ -1,4 +1,7 @@
 from typing import List
 
 def sortedSquares(nums: List[int]) -> List[int]:
-    return []
+    for i in range(len(nums)):
+        nums[i] = nums[i] * nums[i]
+    nums.sort()
+    return nums
