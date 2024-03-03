@@ -8,7 +8,7 @@ class ListNode:
         self.next = next
 
     @staticmethod
-    def fromList(array: List) -> ListNode:
+    def fromList(array: List):
         head = None
         current = None
         for val in array:
@@ -21,7 +21,7 @@ class ListNode:
         return head
     
     @staticmethod
-    def toList(node: ListNode) -> List:
+    def toList(node) -> List:
         array = []
         while node:
             array.append(node.val)
