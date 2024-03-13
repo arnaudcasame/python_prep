@@ -23,4 +23,20 @@ def pivotInteger(n: int) -> int:
     return -1
 
 def pivotIntegerOptimized(n: int) -> int:
-    return 0
+    table = [0]*n
+    toTheLeft = [0]*n
+    toTheRight = [0]*n
+
+    for i in range(0, n):
+        table[i] = i+1
+    
+    for i in range(0, n):
+        toTheRight[i] = table[i] if i==0 else table[i] + toTheRight[i-1]
+        toTheLeft[n-i-1] = table[n-i-1] if i==0 else table[n-i-1] + toTheLeft[n-i]
+
+    print(table, toTheRight, toTheLeft)
+    for i in range(len(toTheRight)):
+        if toTheRight[i] == toTheLeft[i]:
+            return table[i]
+
+    return -1
