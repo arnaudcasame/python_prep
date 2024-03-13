@@ -21,3 +21,6 @@ def pivotInteger(n: int) -> int:
         if toTheRight[i] == toTheLeft[i]:
             return table[i];
     return -1
+
+def pivotIntegerOptimized(n: int) -> int:
+    return 0
